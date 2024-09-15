@@ -13,10 +13,10 @@ Get-WmiObject -Class Win32_OperatingSystem | Select-Object -Property *
 ```
 ![Screenshot of Get-WmiObject command](./images/screenshot2.png)
 ---
-## 3. Network Interface Information
+## 3. Network Interface Information 
 This command retrieves network interface configuration, including IPv4 and IPv6 addresses.
 ```powershell
-Get-NetIPConfiguration | Select-Object -Property InterfaceAlias, IPv4Address, IPv6Address, DNServer
+Get-NetIPConfiguration
 ```
 ![Screenshot of Network Interface Info](./images/screenshot3.png)
 ---
@@ -27,10 +27,24 @@ Get-Process | Select-Object -Property ProcessName, Id, CPU | Sort-Object -Proper
 ```
 ![Screenshot of Get-Process command](./images/screenshot4.png)
 ---
-## 5. Port Scanning (1-1024)
-This command performs a basic port scan on localhost for ports 1 to 1024.
+## 5. Port Scanning 
+This script first retrieves all active TCP connections, showing their state, local address, port, and owning process. </br>
+It then performs a basic port scan on localhost, scanning ports 1 to 1024, and prints out any ports that are currently open.
 ```powershell
-1..1024 | ForEach-Object { $sock = New-Object System.Net.Sockets.TcpClient; $async = $sock.BeginConnect('localhost', $_, $null, $null); $wait = $async.AsyncWaitHandle.WaitOne(100, $false); if($sock.Connected) { $_ }; $sock.Close() }
+
+$tcpConnections = Get-NetTCPConnection | Select-Object -Property State, LocalAddress, LocalPort, OwningProcess
+$tcpConnections
+
+1..1024 | ForEach-Object {
+    $sock = New-Object System.Net.Sockets.TcpClient
+    $async = $sock.BeginConnect('localhost', $_, $null, $null)
+    $wait = $async.AsyncWaitHandle.WaitOne(100, $false)
+    if($sock.Connected) {
+        Write-Host "$_"
+    }
+    $sock.Close()
+}
+
 ```
 ![Screenshot of Port Scanning](./images/screenshot5.png)
 ---
