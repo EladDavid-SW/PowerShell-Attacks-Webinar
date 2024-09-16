@@ -31,8 +31,8 @@ Get-Process | Select-Object -Property ProcessName, Id, CPU | Sort-Object -Proper
 This script first retrieves all active TCP connections, showing their state, local address, port, and owning process.
 It then performs a basic port scan on localhost, scanning ports 1 to 1024, and prints out any ports that are currently open.
 ```powershell
-$tcpConnections = Get-NetTCPConnection | Select-Object -Property State, LocalAddress, LocalPort, OwningProcess
-$tcpConnections
+Get-NetTCPConnection | Select-Object -Property State, LocalAddress, LocalPort, OwningProcess
+
 1..1024 | ForEach-Object {
    $sock = New-Object System.Net.Sockets.TcpClient
    $async = $sock.BeginConnect('localhost', $_, $null, $null)
