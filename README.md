@@ -85,3 +85,5 @@ ForEach-Object {
    netsh wlan show profile name="$profileName" key=clear
 }
 ```
+![Screenshot of Extract Wi-Fi Profile Names and Passwords](./images/screenshot10.png)
+
