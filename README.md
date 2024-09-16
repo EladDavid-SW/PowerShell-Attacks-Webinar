@@ -46,6 +46,7 @@ $tcpConnections
 ![Screenshot of Port Scanning](./images/screenshot5.png)
 ---
 ## 6. Bypass Execution Policy and Run Script
+What is [PowerShell Gallery](https://www.powershellgallery.com/)? </br>
 This command temporarily bypasses the script execution policy and runs a PowerShell script.
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process; .\script.ps1
