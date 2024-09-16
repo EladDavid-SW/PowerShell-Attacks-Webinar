@@ -50,6 +50,8 @@ This command temporarily bypasses the script execution policy and runs a PowerSh
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process; .\script.ps1
 ```
+![Screenshot of Bypass Execution Policy and Run Script](./images/screenshot6_1.png)
+![Screenshot of Bypass Execution Policy and Run Script](./images/screenshot6_2.png)
 ---
 ## 7. Bypass Execution Policy Temporarily
 This command temporarily bypasses the execution policy for running scripts and then reverts it.
@@ -65,6 +67,7 @@ This command lists all stored credentials.
 ```powershell
 cmdkey /list
 ```
+![Screenshot of List Stored Credentials](./images/screenshot8.png)
 ---
 ## 9. Execute PowerShell Script from Memory
 This command reads the content of a PowerShell script from a file and executes it in memory.
