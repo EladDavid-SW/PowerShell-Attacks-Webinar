@@ -102,7 +102,7 @@ ForEach-Object {
 Watch an advanced attack demonstrated by a pro hacker:
 [Watch the video here](https://youtu.be/qehMT4ZXEWo)
 
-![GPO Attack](./images/gpo.png)
+![GPO Attack](./images/gpo.PNG)
 
 ---
 
