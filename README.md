@@ -96,3 +96,15 @@ ForEach-Object {
 ```
 ![Screenshot of Extract Wi-Fi Profile Names and Passwords](./images/screenshot10.png)
 
+---
+
+## 11. Bonus for Professionals
+Watch an advanced attack demonstrated by a pro hacker:
+[Watch the video here](https://youtu.be/qehMT4ZXEWo)
+
+![GPO Attack](./images/gpo.png)
+
+---
+
+
+
