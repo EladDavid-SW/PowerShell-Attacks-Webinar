@@ -1,3 +1,13 @@
+# PowerShell Attacks Webinar
+
+Click below to watch the full webinar:
+
+[![Watch the full webinar](https://img.shields.io/badge/Watch_Webinar-blue?style=for-the-badge&logo=youtube)](https://youtu.be/yt7RBrENCq4?si=42X_-2E88vJvU40v)
+
+---
+
+
+
 ## 1. Bypassing Windows Defender
 Windows Defender is going to raise the first alarm. Disabling it is not an
 option. </br>
